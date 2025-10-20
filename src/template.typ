@@ -1,12 +1,6 @@
 #let primary = rgb("#2c3e50")
 #let secondary = rgb("#000")
-#let accent = rgb("#3498db")
-#let danger = rgb("#e74c3c")
-#let success = rgb("#27ae60")
 #let gray-dark = rgb("#2c3e50")
-#let gray-medium = rgb("#7f8c8d")
-#let gray-light = rgb("#ecf0f1")
-#let gray-ultralight = rgb("#f8f9fa")
 
 #let report(titolo: none, stato: none,versione: none, presenze:none, body) = [
 
@@ -27,7 +21,7 @@
 
   #set text(
     font: ("Helvetica Neue", "Arial", "sans-serif"),
-    size: 10.5pt,
+    size: 11pt,
     fill: gray-dark,
   )
 
@@ -81,7 +75,7 @@
     #v(3cm)
 
       #align(center)[
-        #image("/asset/logo.jpeg",width: 8cm)
+        #image("/asset/lg-removebg-preview.png",width: 8cm)
         
         #text(size: 26pt, fill: secondary, weight: "bold")[
           #titolo
