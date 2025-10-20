@@ -11,6 +11,6 @@
     #table(
     columns: (auto, auto, auto, auto, auto),
     [*Ver.*], [*Data*], [*Autore*], [*Verificatore*], [*Contenuto*],
-    [1.0], [17-10-2025], [Alessandro], [Michele], [Prima riunione]
+    [1.0], [17-10-2025], [Alessandro], [Siria], [Prima riunione con azienta gialla]
     )
   ]
