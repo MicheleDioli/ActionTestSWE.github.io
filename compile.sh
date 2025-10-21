@@ -2,7 +2,7 @@
 set -e
 
 SRC_DIR="src"
-OUT_DIR="pdf"
+OUT_DIR="website/pdf"
 typ_files=()
 while IFS= read -r -d '' file; do
     typ_files+=("$file")
