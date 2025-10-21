@@ -15,7 +15,7 @@ import (
 type PDFDocument struct {
 	path  string
 	title string
-	tag   string
+	id    string
 }
 
 const KEYWORDS_N = 1
@@ -34,7 +34,7 @@ func loadPDFMetadata(pdf *PDFDocument) error {
 	if len(keywordsList) != KEYWORDS_N {
 		return fmt.Errorf("there are not exactly %d keywords, check the typst file", KEYWORDS_N)
 	}
-	pdf.tag = keywordsList[0]
+	pdf.id = keywordsList[0]
 
 	return nil
 }
@@ -78,7 +78,7 @@ func getAttr(n *html.Node, key string) string {
 	return ""
 }
 
-func addChildToTag(htmlStr string, id string, childHTML string) (string, error) {
+func addChildToId(htmlStr string, id string, childHTML string) (string, error) {
 	doc, err := html.Parse(strings.NewReader(htmlStr))
 	if err != nil {
 		return "", err
@@ -122,10 +122,10 @@ func main() {
 	htmlStr := string(htmlBytes)
 
 	for _, d := range docs {
-		d.path = strings.Replace(d.path, "/website", "", 1)
-		fmt.Printf("%s\n", d.path)
+		d.path = strings.Replace(d.path, "./website", "", 1)
 		renderedHTML := fmt.Sprintf(TEMPLATE, d.path, d.title)
-		updatedHTML, err := addChildToTag(htmlStr, d.tag, renderedHTML)
+		fmt.Println(d.id)
+		updatedHTML, err := addChildToId(htmlStr, d.id, renderedHTML)
 		if err != nil {
 			fmt.Println("Error:", err)
 			return
