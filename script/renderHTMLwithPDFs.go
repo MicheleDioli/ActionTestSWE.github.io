@@ -122,6 +122,8 @@ func main() {
 	htmlStr := string(htmlBytes)
 
 	for _, d := range docs {
+		d.path = strings.Replace(d.path, "/website", "", 1)
+		fmt.Printf("%s\n", d.path)
 		renderedHTML := fmt.Sprintf(TEMPLATE, d.path, d.title)
 		updatedHTML, err := addChildToTag(htmlStr, d.tag, renderedHTML)
 		if err != nil {

@@ -1,4 +1,4 @@
-#let primary = rgb("#2c3e50")
+#let primary = rgb("#9948bc")
 #let secondary = rgb("#000")
 #let gray-dark = rgb("#2c3e50")
 
@@ -21,7 +21,7 @@
   )
 
   #set text(
-    font: ("Helvetica Neue", "Arial", "sans-serif"),
+    font: "Helvetica",
     size: 11pt,
     fill: gray-dark,
   )
@@ -76,9 +76,9 @@
     #v(3cm)
 
     #align(center)[
-      #image("./asset/lg-removebg-preview.png", width: 8cm)
+      #image("./asset/loghi/GlitchHub-Team_LogoG.jpg", width: 13cm)
 
-      #text(size: 26pt, fill: secondary, weight: "bold")[
+      #text(size: 40pt, fill: secondary, weight: "bold")[
         #titolo
       ]
 
@@ -92,9 +92,9 @@
       inset: 8pt,
       radius: 6pt,
     )[
-      #text(weight: "bold", fill: primary)[Stato:] #stato
-      #text(weight: "bold", fill: primary)[Versione:] #versione
-      #text(weight: "bold", fill: primary)[Presenze:] #presenze
+      #text(weight: "bold", fill: secondary)[Stato:] #stato
+      #text(weight: "bold", fill: secondary)[Versione:] #versione
+      #text(weight: "bold", fill: secondary)[Presenze:] #presenze
 
     ]
   ]
