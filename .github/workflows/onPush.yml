@@ -44,7 +44,7 @@ jobs:
           path: website/
           retention-days: 1
           if-no-files-found: error
-          
+
   deploy:
       needs: build
       runs-on: ubuntu-latest
@@ -63,11 +63,11 @@ jobs:
 
         - name: Install Go dependencies
           run: go mod tidy
-          working-directory: ./script
+          working-directory: script/
 
         - name: Render HTML with Go
           run: go run renderHTMLwithPDFs.go
-          working-directory: ./script
+          working-directory: script/
 
         - name: Configure GitHub Pages
           uses: actions/configure-pages@v5
