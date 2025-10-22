@@ -12,7 +12,7 @@ for typ_file in "${typ_files[@]}"; do
     rel_path="${typ_file#$SRC_DIR/}"
     pdf_file="$OUT_DIR/${rel_path%.typ}.pdf"
 
-    if [ "$rel_path" == "template.typ" || "$rel_path" == "lib.typ" ]; then
+    if [ "$rel_path" == "template.typ"] || ["$rel_path" == "lib.typ" ]; then
         echo "Skipping $rel_path"
         continue
     fi
