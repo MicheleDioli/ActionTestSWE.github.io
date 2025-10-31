@@ -1,21 +1,20 @@
 #let hwr(
   language: "en",
-  main-font: "Futura",
+  main-font: "Poppins",
   // Main Metadata for the title page
   metadata: (
     paper_type: [],
     title: [PTB Template],
     version: none,
     university: none,
-    odg: none,
     uni-logo: none,
     company-logo: none,
   ),
   custom-entries: (),
+  tipo-documento: "",
+  verificatore-interno: "",
   label-signature-left: [],
   left-signature: "",
-  label-signature-right: [],
-  right-signature: "",
   body,
 ) = {
   set document(title: metadata.title)
@@ -23,7 +22,7 @@
   set text(font: main-font, lang: language)
 
   // SETUP Title page
-  let equal-spacing = 0.25fr
+  let equal-spacing = 4.5em
   set align(center)
 
   // Logo settings
@@ -74,7 +73,7 @@
   let line-length = 90%
   text(1em, weight: 700, baseline: -13.5pt, metadata.at("paper_type", default: []))
   line(length: line-length)
-  text(2em, weight: 700, metadata.title)
+  text(2em, weight: 900, metadata.title)
   line(length: line-length)
 
   // Author information.
@@ -82,12 +81,10 @@
     top: 2.9em,
     text(
       1.3em,
-      strong("Ordine del giorno"),
+      strong(""),
     ),
   )
 
-  // Middle sec
-  text(1.1em, [#metadata.at("odg", default: "")])
   v(0.6em, weak: true)
   $circle.filled.small$
   v(0.6em, weak: true)
@@ -140,9 +137,14 @@
   table(
     columns: (50%, 50%),
     stroke: none,
-    inset: 20pt,
+    inset: (x: 20pt, y: 0pt),
     align: left,
-    if left-signature != "" [#image(left-signature)], if right-signature != "" [#image(right-signature)],
-    [#line(length: 100%)#label-signature-left], [#line(length: 100%)#label-signature-right],
+    if left-signature != "" [
+      #text(weight: "bold")[#verificatore-interno]
+      #image(left-signature, height: 1.5cm),
+    ],
+    [],
+
+    [#line(length: 100%)#label-signature-left],
   )
 }

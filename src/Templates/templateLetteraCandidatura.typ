@@ -1,4 +1,4 @@
-#import "../../lib/lib.typ": *
+#import "../lib/libLetteraCand.typ": *
 
 #let primary = rgb("#9948bc")
 #let secondary = rgb("#000")
@@ -8,21 +8,21 @@
   titolo: none,
   stato: none,
   versione: none,
-  partecipanti: none,
   distribuzione: none,
+  componenti: none,
   htmlId: none,
-  odg: none,
+  aca: none,
   registro-modifiche: (),
+  verificatore-interno: "",
   left-signature: "",
-  right-signature: "",
-  tipo-verbale: "Interno",
+  tipo-documento: "",
   body,
 ) = [
 
   #set document(
     title: titolo,
     author: "GlitchHub Team",
-    keywords: htmlId,
+    keywords: (htmlId, versione),
   )
 
   #set page(
@@ -49,35 +49,32 @@
 
     metadata: (
       title: titolo,
-      odg: odg,
+      aca: aca,
       version: "Versione " + text(weight: "bold")[#versione],
-      company-logo: image("../../assets/loghi/GlitchHub-Team_LogoG.png", width: 75%),
-      uni-logo: image("../../assets/loghi/logo_unipd_scritta.jpg", width: 51%),
+      company-logo: image("../assets/loghi/GlitchHub-Team_LogoG.png", width: 75%),
+      uni-logo: image("../assets/loghi/logo_unipd_scritta.jpg", width: 51%),
     ),
 
     custom-entries: (
       (key: "Stato", value: stato, index: 0),
       (
-        key: "Partecipanti",
-        value: for p in partecipanti {
-          p + "\n"
-        },
-        index: 1,
-      ),
-      (
         key: "Distribuzione",
         value: for d in distribuzione {
           d + "\n"
         },
-        index: 2,
+        index: 1,
+      ),
+      (
+        key: "Componenti",
+        value: for c in componenti {
+          c + "\n"
+        },
+        index: 1,
       ),
     ),
-    label-signature-left: [#if (tipo-verbale == "Esterno") { "Firma del revisore aziendale" } else {
-      "Firma del revisore interno"
-    }],
+    verificatore-interno: verificatore-interno,
+    label-signature-left: [Firma del revisore interno],
     left-signature: left-signature,
-    label-signature-right: [Firma dell'autore],
-    right-signature: right-signature,
   )
 
 
@@ -91,7 +88,7 @@
         columns: (1fr, 1fr),
         align(left)[
           #move(dy: 2pt)[
-            #image("../../assets/loghi/GlitchHub-Team_LogoP.png", height: 15pt)
+            #image("../assets/loghi/GlitchHub-Team_LogoP.png", height: 15pt)
           ]
         ],
         align(right)[
@@ -117,11 +114,6 @@
   #let nRegModifiche = registro-modifiche.len()
   #show table.cell.where(y: 0): strong
   #set table(
-    stroke: (x, y) => (
-      if y != nRegModifiche {
-        (bottom: 0.8pt + black)
-      }
-    ),
     align: (x, y) => (
       if x > 0 { center } else { left }
     ),
@@ -135,11 +127,14 @@
     ]
 
     #table(
-      columns: (0.1fr, 0.20fr, 0.30fr, 0.40fr),
+      columns: (0.1fr, 0.14fr, 0.22fr, 0.22fr, 0.32fr),
       align: left,
-      table.header([*Ver.*], [*Data*], [*Autore*], [*Descrizione*]),
-      ..for (ver, data, autore, descrizione) in registro-modifiche {
-        ([#ver], [#data], [#autore], [#descrizione])
+      stroke: (x, y) => (
+        bottom: if y == 0 { 1pt + black } else { 0.8pt + black },
+      ),
+      table.header([*Ver.*], [*Data*], [*Autore*], [*Verificatore*], [*Descrizione*]),
+      ..for (ver, data, autore, verificatore, descrizione) in registro-modifiche {
+        ([#ver], [#data], [#autore], [#verificatore], [#descrizione])
       },
     )
 
@@ -149,5 +144,8 @@
 
   #v(1em)
   #outline()
+
+  #pagebreak()
+
   #body
 ]
