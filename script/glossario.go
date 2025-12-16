@@ -19,25 +19,28 @@ var TargetFolders = []string{
 	"src/Candidatura",
 }
 
+var FilesToIgnore = map[string]bool{
+	"LetteraPresentazione.typ": true,
+}
+
 func main() {
 	if _, err := os.Stat(GlossaryFile); os.IsNotExist(err) {
-		fmt.Printf("Glossario non trovato: %s\n", GlossaryFile)
-		fmt.Println("Problema con root.")
+		fmt.Printf("No glossario in: %s\n", GlossaryFile)
 		return
 	}
 
-	fmt.Println("sono qui", GlossaryFile, "...")
+	fmt.Println("🔍 Estrazione termini da", GlossaryFile, "...")
 	terms, err := extractTerms(GlossaryFile)
 	if err != nil {
-		fmt.Printf("Errore lettura glossario: %v\n", err)
+		fmt.Printf("Lett glossario: %v\n", err)
 		return
 	}
 
 	for _, folder := range TargetFolders {
+
 		err := filepath.WalkDir(folder, func(path string, d fs.DirEntry, err error) error {
 			if err != nil {
-
-				fmt.Printf("errore in  %s: %v\n", path, err)
+				fmt.Printf("Errore in %s: %v\n", path, err)
 				return filepath.SkipDir
 			}
 
@@ -45,10 +48,14 @@ func main() {
 				return nil
 			}
 
-			if filepath.Ext(path) == ".typ" {
+			fileName := filepath.Base(path)
+
+			if filepath.Ext(path) == ".typ" && !FilesToIgnore[fileName] {
+
 				if filepath.Clean(path) == filepath.Clean(GlossaryFile) {
 					return nil
 				}
+
 				processFile(path, terms)
 			}
 			return nil
@@ -59,6 +66,7 @@ func main() {
 		}
 	}
 
+	fmt.Println("\nFINE")
 }
 
 func extractTerms(path string) ([]string, error) {
@@ -95,16 +103,13 @@ func processFile(path string, terms []string) {
 
 	for _, term := range terms {
 		escapedTerm := regexp.QuoteMeta(term)
-
 		pattern := fmt.Sprintf(`(#gloss\[)?\b(%s)\b`, escapedTerm)
 		re := regexp.MustCompile(pattern)
 
 		content = re.ReplaceAllStringFunc(content, func(match string) string {
-
 			if strings.HasPrefix(match, "#gloss[") {
 				return match
 			}
-
 			return fmt.Sprintf("#gloss[%s]", term)
 		})
 	}
@@ -114,7 +119,7 @@ func processFile(path string, terms []string) {
 		if err != nil {
 			fmt.Printf("Errore scrittura %s: %v\n", path, err)
 		} else {
-			fmt.Printf("Modificato ->>: %s\n", path)
+			fmt.Printf("Modificato: %s\n", path)
 		}
 	}
 }
