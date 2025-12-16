@@ -27,11 +27,13 @@
                 </button>
 
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="#candidatura">Candidatura</a></li>
                     <li><a href="#rtb">RTB</a></li>
-                    <li><a href="#pb">PB</a></li>
-                    <li><a href="#Diapositive">Diapositive</a></li>
+                    <li><a href="#candidatura">Candidatura</a></li>
+                    <li class="nascondi"><a href="#pb">PB</a></li>
+                    <li class="nascondi"><a href="#Diapositive">Diapositive</a></li>
                     <li><a href="#chisiamo">Chi siamo</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="./pdf/glossary.pdf" target="_blank">Glossario</a></li>
                 </ul>
             </div>
         </nav>
@@ -48,24 +50,19 @@
 
     <div class="container">
         <details id="candidatura">
-            <summary><h2>Candidatura</h2></summary>
+            <summary>
+                <h2>Candidatura</h2>
+            </summary>
 
             <div>
-                    <section>
-                        <p>Candidatura</p>
-                        <ul id="Candidatura-Generale">
-                        </ul>
-                    </section>
-                </div>
+                <section>
+                    <p>Documenti</p>
+                    <ul id="Candidatura-Generale">
+                    </ul>
+                </section>
+            </div>
 
             <div class="liste">
-                <div>
-                    <section>
-                        <p>Verbali interni</p>
-                        <ul id="Candidatura-VerbaliInterni">
-                        </ul>
-                    </section>
-                </div>
 
                 <div>
                     <section>
@@ -74,16 +71,44 @@
                         </ul>
                     </section>
                 </div>
-            </div>
-        </details>
 
-        <details id="rtb">
-            <summary><h2>RTB</h2></summary>
-            <div class="liste">
                 <div>
                     <section>
                         <p>Verbali interni</p>
-                        <ul id="RTB-VerbaliInterni">
+                        <ul id="Candidatura-VerbaliInterni">
+                        </ul>
+                    </section>
+                </div>
+
+            </div>
+        </details>
+
+        <details id="rtb" open>
+            <summary>
+                <h2>RTB</h2>
+            </summary>
+
+            <div>
+                <section>
+                    <ul id="RTB-Generale">
+                    </ul>
+                </section>
+            </div>
+
+            <div class="liste">
+
+                <div>
+                    <section>
+                        <p>Documenti esterni</p>
+                        <ul id="RTB-DocumentiEsterni">
+                        </ul>
+                    </section>
+                </div>
+
+                <div>
+                    <section>
+                        <p>Documenti interni</p>
+                        <ul id="RTB-DocumentiInterni">
                         </ul>
                     </section>
                 </div>
@@ -95,11 +120,22 @@
                         </ul>
                     </section>
                 </div>
+
+                <div>
+                    <section>
+                        <p>Verbali interni</p>
+                        <ul id="RTB-VerbaliInterni">
+                        </ul>
+                    </section>
+                </div>
+
             </div>
         </details>
 
-        <details id="pb">
-            <summary><h2>PB</h2></summary>
+        <details id="pb" class="nascondi">
+            <summary>
+                <h2>PB</h2>
+            </summary>
             <div class="liste">
                 <div>
                     <section>
@@ -119,8 +155,10 @@
             </div>
         </details>
 
-        <details>
-            <summary><h2>Diapositive</h2></summary>
+        <details class="nascondi">
+            <summary>
+                <h2>Diapositive</h2>
+            </summary>
             <ul id="Diapositive">
             </ul>
         </details>
@@ -167,7 +205,7 @@
                     <dt>Matricola</dt>
                     <dd>2069428</dd>
                     <dt>Email</dt>
-                    <dd><a href="mailto:jaume.barcit@gmail.com">jaume.barcit@gmail.com</a></dd>
+                    <dd><a href="mailto:jaume.bernardi@studenti.unipd.it">jaume.bernardi@studenti.unipd.it</a></dd>
                 </dl>
             </div>
             <div class="member">
@@ -204,7 +242,7 @@
     </section>
 
     <footer>
-        <dl>
+        <dl id="contatti">
             <dt>Email</dt>
             <dd><a href="mailto:glitchhubteam@gmail.com" target="_blank">glitchhubteam@gmail.com</a></dd>
         </dl>
@@ -214,6 +252,9 @@
             <dd><a href="https://github.com/GlitchHub-Team" target="_blank" rel="noopener noreferrer">GlitchHubteam</a>
             </dd>
         </dl>
+        <div>
+            Copyright© 2025-2026 by <i>GlitchHub Team</i> - All rights reserved
+        </div>
     </footer>
 
 
