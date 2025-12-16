@@ -25,12 +25,14 @@ var FilesToIgnore = map[string]bool{
 
 func main() {
 	if _, err := os.Stat(GlossaryFile); os.IsNotExist(err) {
+		fmt.Printf("No glossario in: %s\n", GlossaryFile)
 		return
 	}
 
 	fmt.Println("🔍 Estrazione termini da", GlossaryFile, "...")
 	terms, err := extractTerms(GlossaryFile)
 	if err != nil {
+		fmt.Printf("Lett glossario: %v\n", err)
 		return
 	}
 
@@ -38,6 +40,7 @@ func main() {
 
 		err := filepath.WalkDir(folder, func(path string, d fs.DirEntry, err error) error {
 			if err != nil {
+				fmt.Printf("Errore in %s: %v\n", path, err)
 				return filepath.SkipDir
 			}
 
@@ -58,6 +61,9 @@ func main() {
 			return nil
 		})
 
+		if err != nil {
+			fmt.Printf("Errore scansione %s: %v\n", folder, err)
+		}
 	}
 
 	fmt.Println("\nFINE")
@@ -89,6 +95,7 @@ func extractTerms(path string) ([]string, error) {
 func processFile(path string, terms []string) {
 	contentBytes, err := os.ReadFile(path)
 	if err != nil {
+		fmt.Printf("Impossibile leggere %s: %v\n", path, err)
 		return
 	}
 	content := string(contentBytes)
@@ -110,9 +117,9 @@ func processFile(path string, terms []string) {
 	if content != originalContent {
 		err := os.WriteFile(path, []byte(content), 0644)
 		if err != nil {
-			fmt.Printf("Errore  %s: %v\n", path, err)
+			fmt.Printf("Errore scrittura %s: %v\n", path, err)
 		} else {
-			fmt.Printf("fatto: %s\n", path)
+			fmt.Printf("Modificato: %s\n", path)
 		}
 	}
 }
