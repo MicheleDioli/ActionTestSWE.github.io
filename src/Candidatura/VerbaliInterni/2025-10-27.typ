@@ -1,4 +1,4 @@
-#import "../../Templates/templateVerbali.typ": report,gloss
+#import "../../Templates/templateVerbali.typ": *
 
 #show link: underline
 #show: report.with(

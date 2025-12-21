@@ -41,7 +41,7 @@
     "Allineamento sugli attori del sistema",
     "Assegnazione delle prossime task basate sulle decisioni prese",
   ),
-  htmlId: "#gloss[RTB]-VerbaliInterni",
+  htmlId: "RTB-VerbaliInterni",
   verificatore-interno: "Hossam Ezzemouri",
   left-signature: "../assets/firme/firma_Hossam_Ezzemouri.png",
   tipo-verbale: "Interno",
@@ -72,11 +72,11 @@ I dubbi sono stati prontamente inviati a M31 tramite email per ricevere chiarime
 Il gruppo ha discusso gli attori del sistema per assicurarsi che tutti i membri avessero una comprensione comune.
 Sono stati identificati i seguenti attori principali:
 - *Super-admin*: amministratore globale del sistema, responsabile della gestione dei tenant-admin e della visualizzazione aggregata dei dati;
-- *#gloss[Tenant]-admin*: amministratore di un singolo tenant, responsabile della gestione degli utenti e dei gateway associati al proprio tenant;
+- *Tenant-admin*: amministratore di un singolo tenant, responsabile della gestione degli utenti e dei gateway associati al proprio tenant;
 - *Gateway*: dispositivo fisico che raccoglie i dati dai sensori e li invia al cloud;
 - *User*: utente generico che accede al sistema;
-- *REST client*: applicazione o servizio _esterno_ che interagisce con il sistema tramite #gloss[API] REST;
-- *#gloss[Tenant] user*: utente associato a un tenant specifico, con soli permessi di lettura dati.
+- *REST client*: applicazione o servizio _esterno_ che interagisce con il sistema tramite API REST;
+- *Tenant user*: utente associato a un tenant specifico, con soli permessi di lettura dati.
 
 == Assegnazione delle prossime task basate sulle decisioni prese
 Il gruppo ha deciso di suddividersi la scrittura dei casi d'uso per attore principale.
@@ -109,7 +109,7 @@ Il gruppo ha deciso di suddividersi la scrittura dei casi d'uso per attore princ
   [Alessandro Dinato, Hossam Ezzemouri],
   [#link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/issues/80")[*\#80*]],
 
-  [Scrittura e verifica PdP #gloss[Sprint] 4],
+  [Scrittura e verifica PdP Sprint 4],
   [Alessandro Dinato, Hossam Ezzemouri],
   [#link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/issues/81")[*\#81*]],
 )

@@ -20,7 +20,7 @@
     "Discussione sull'esempio implementativo proposto dall'azienda",
     "Discussione dubbi sui privilegi e le funzionalità dell'utente super-admin",
   ),
-  htmlId: "#gloss[RTB]-VerbaliEsterni",
+  htmlId: "RTB-VerbaliEsterni",
   verificatore-interno: "Hossam Ezzemouri",
   left-signature: "../assets/firme/firma_Hossam_Ezzemouri.png",
   verificatore-esterno: "Cristian Pirlog",
@@ -63,7 +63,7 @@ L'accettazione della richiesta viene fatta solo quando l'installazione del gatew
 Inoltre, il super admin può sempre manualmente associare o dissociare gateway dai tenant.
 
 === Consumi e Costi
-I costi sono pensati come “a consumo”, su modello simile alle #gloss[API] (ad esempio OpenAI). Il consumo è legato ai dati generati dai sensori e inviati dai gateway.\
+I costi sono pensati come “a consumo”, su modello simile alle API (ad esempio OpenAI). Il consumo è legato ai dati generati dai sensori e inviati dai gateway.\
 Il tenant admin può configurare i consumi modificando la frequenza o la modalità di invio dei dati (es. rolling average).
 Ogni tenant può visualizzare il proprio consumo complessivo e il dettaglio per singolo gateway.\
 Il super admin può visualizzare l'andamento dei costi dei tenant.
@@ -71,15 +71,15 @@ Il super admin può visualizzare l'andamento dei costi dei tenant.
 === Comunicazione e Flusso dei Dati
 I sensori comunicano con un unico gateway (modello many-to-one). Il gateway invia i dati al server M31, che si occupa della normalizzazione.\
 La dashboard cloud visualizza i dati interrogando il server.\
-La piattaforma non fornisce persistenza massiva: funge da tunnel di dati, mentre sistemi di storage o dashboard avanzate vengono costruiti dal cliente sulla base delle #gloss[API] offerte.
+La piattaforma non fornisce persistenza massiva: funge da tunnel di dati, mentre sistemi di storage o dashboard avanzate vengono costruiti dal cliente sulla base delle API offerte.
 
 === Provisioning e Certificati
 Il processo previsto è avviato dal super admin, quando un nuovo gateway deve essere aggiunto al sistema il super admin lo associa ad un tenant e ne avvia il provisioning.\
 
 === Permessi degli Utenti
 Gli utenti normali possono esclusivamente visualizzare i dati.
-Per l'#gloss[MVP] non si implementa un sistema avanzato di autorizzazioni granulari: gli utenti di un tenant possono visualizzare tutti i dati del tenant.
-Eventuali dashboard o filtraggi complessi vengono costruiti dai clienti tramite le #gloss[API].
+Per l'MVP non si implementa un sistema avanzato di autorizzazioni granulari: gli utenti di un tenant possono visualizzare tutti i dati del tenant.
+Eventuali dashboard o filtraggi complessi vengono costruiti dai clienti tramite le API.
 
 === Altre Chiarificazioni
 - Il super admin non interviene nel flusso dei dati salvo casi anomali.

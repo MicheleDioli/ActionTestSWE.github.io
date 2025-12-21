@@ -1,4 +1,4 @@
-#import "../../Templates/templateVerbali.typ": report,gloss
+#import "../../Templates/templateVerbali.typ": *
 
 #show: report.with(
   titolo: "Verbale esterno 22/10/2025 (Miriade)",

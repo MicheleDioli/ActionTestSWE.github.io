@@ -1,15 +1,16 @@
 #import "../lib/libVerbali.typ": *
+#import "../lib/libUtil.typ": *
 
 #let primary = rgb("#9948bc")
 #let secondary = rgb("#000")
 #let gray-dark = rgb("#2c3e50")
 
-#let gloss(content) = [*#content#sub[G]*]
+#let gloss(term) = [*#term#sub[G]*]
 
 #let report(
   titolo: none,
   stato: none,
-  versione: none,
+  versione: none, // Parametro mantenuto per retrocompatibilità
   partecipanti: none,
   distribuzione: none,
   htmlId: none,
@@ -48,6 +49,12 @@
     spacing: 1.2em,
   )
 
+  #let versione-auto = if registro-modifiche.len() > 0 {
+  registro-modifiche.first().at(0)
+} else {
+  ""
+}
+
   #show: hwr.with(
     language: "it",
     main-font: "PT Sans",
@@ -55,7 +62,7 @@
     metadata: (
       title: titolo,
       odg: odg,
-      version: "Versione " + text(weight: "bold")[#versione],
+      version: "Versione " + text(weight: "bold")[#versione-auto],
       company-logo: image("../assets/loghi/GlitchHub-Team_LogoG.png", width: 75%),
       uni-logo: image("../assets/loghi/logo_unipd_scritta.jpg", width: 51%),
     ),
