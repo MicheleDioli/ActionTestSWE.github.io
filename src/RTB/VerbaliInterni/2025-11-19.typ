@@ -1,4 +1,4 @@
-#import "../../Templates/templateVerbali.typ": report,gloss
+#import "../../Templates/templateVerbali.typ": *
 
 #show link: underline
 #show: report.with(
@@ -44,11 +44,11 @@
   ),
   odg: (
     "Convenzioni per la scrittura dei documenti",
-    "Allineamento sulle #gloss[Norme di progetto]",
-    "Allineamento sulle #gloss[Norme di progetto]",
+    "Allineamento sulle Norme di progetto",
+    "Allineamento sulle Norme di progetto",
     "Prossimi incontri con M31",
   ),
-  htmlId: "#gloss[RTB]-VerbaliInterni",
+  htmlId: "RTB-VerbaliInterni",
   verificatore-interno: "Siria Salvalaio",
   left-signature: "../assets/firme/firma_Siria_Salvalaio.png",
   tipo-verbale: "Interno",
@@ -68,9 +68,9 @@ Per la realizzazione dei diagrammi dei casi d’uso è stato scelto _draw.io_, r
 Durante la discussione è emerso un dubbio riguardo alla corretta gestione dei sotto-diagrammi. Si è deciso che un diagramma deve essere ridisegnato solo quando il sotto-diagramma non rappresenti una foglia.
 
 
-== Allineamento sulle #gloss[Norme di progetto]
+== Allineamento sulle Norme di progetto
 
-È stata definita una scaletta per la conduzione delle #gloss[Sprint Retrospective], in modo da adottare un framework comune e mantenere gli incontri ordinati. La scaletta comprende:
+È stata definita una scaletta per la conduzione delle Sprint Retrospective, in modo da adottare un framework comune e mantenere gli incontri ordinati. La scaletta comprende:
 - riepilogo delle attività svolte;
 - allineamento sulle risorse utilizzate;
 - analisi dei rischi incontrati;
@@ -81,7 +81,7 @@ Durante la discussione è emerso un dubbio riguardo alla corretta gestione dei s
 È stato inoltre definito il workflow da seguire per la gestione delle issue relative alla documentazione.
 Ogni attività di creazione di un documento corrisponderà a un’issue di tipo _documentation_. Scrittura e verifica saranno gestite all’interno della stessa issue.
 
-Nella descrizione dell'issue su #gloss[GitHub] verranno indicati i responsabili di ciascuna attività.\
+Nella descrizione dell'issue su GitHub verranno indicati i responsabili di ciascuna attività.\
 All'avvio della scrittura, l’issue verrà contrassegnata come “In Progress”; quando il documento passa alla verifica, lo stato diventerà “In Review”.
 Per i documenti incrementali, ovvero soggetti a modifiche durante tutto il progetto, sarà creata una _parent issue_ che raccoglierà tutte le attività relative al documento. Per ciascuna versione verrà aperta una sub-issue collegata alla parent issue, mentre la versione 1.0.0 sarà associata al documento consegnato alla relativa milestone.
 
@@ -98,7 +98,7 @@ Nel frattempo, è stato ricevuto il verbale esterno firmato relativo all’incon
   [Alessandro Dinato],
   [#link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/issues/40")[*\#40*] ],
 
-  [#gloss[Verifica] Piano di Progetto v0.1.0],
+  [Verifica Piano di Progetto v0.1.0],
   [Siria Salvalaio],
   [#link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/issues/47")[*\#47*] ],
 
@@ -106,7 +106,7 @@ Nel frattempo, è stato ricevuto il verbale esterno firmato relativo all’incon
   [Elia Stellin],
   [#link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/issues/41")[*\#41*] ],
 
-  [#gloss[Verifica] Norme di Progetto v0.1.0],
+  [Verifica Norme di Progetto v0.1.0],
   [Jaume Bernardi],
   [#link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/issues/50")[*\#50*] ],
 
@@ -114,7 +114,7 @@ Nel frattempo, è stato ricevuto il verbale esterno firmato relativo all’incon
   [Michele Dioli],
   [#link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/issues/54")[*\#54*]],
 
-  [#gloss[Verifica] Verbale Interno 2025-11-19],
+  [Verifica Verbale Interno 2025-11-19],
   [Siria Salvalaio],
   [#link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/issues/53")[*\#53*]],
 )

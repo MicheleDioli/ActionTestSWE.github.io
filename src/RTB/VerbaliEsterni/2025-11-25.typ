@@ -21,7 +21,7 @@
     "Discussione sui casi d'uso",
     "Stabilire giorno settimanale per futuri incontri",
   ),
-  htmlId: "#gloss[RTB]-VerbaliEsterni",
+  htmlId: "RTB-VerbaliEsterni",
   verificatore-interno: "Siria Salvalaio",
   left-signature: "../assets/firme/firma_Siria_Salvalaio.png",
   verificatore-esterno: "Cristian Pirlog",

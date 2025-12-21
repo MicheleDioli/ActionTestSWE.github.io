@@ -37,10 +37,10 @@
   ),
   odg: (
     "Manutenzione della documentazione",
-    "Discussione workflow delle #gloss[GitHub] Issues",
+    "Discussione workflow delle GitHub Issues",
     "Workflow documentazione incrementale",
   ),
-  htmlId: "#gloss[RTB]-VerbaliInterni",
+  htmlId: "RTB-VerbaliInterni",
   verificatore-interno: "Riccardo Graziani",
   left-signature: "../assets/firme/firma_Riccardo_Graziani.png",
   tipo-verbale: "Interno",
@@ -57,8 +57,8 @@ Il gruppo ha discusso le modalità di manutenzione della documentazione.
 È stato stabilito che chiunque individui un errore in un documento si prende in carico la correzione e richiede successivamente una verifica da parte di un terzo membro.
 Qualora il documento fosse già stato pubblicato nel sito del gruppo, la modifica dovrà essere proposta tramite una nuova *pull request*.
 
-== Workflow #gloss[GitHub] Issues
-Durante l'incontro sono stati definiti nuovi campi da aggiungere alle #gloss[GitHub] Issues:
+== Workflow GitHub Issues
+Durante l'incontro sono stati definiti nuovi campi da aggiungere alle GitHub Issues:
 - *priority*: priorità dell'attività
 - *start date*: data di inizio lavorazione
 - *target date*: data prevista di consegna, che non può superare la fine dello sprint
@@ -69,8 +69,8 @@ Durante l'incontro sono stati definiti nuovi campi da aggiungere alle #gloss[Git
 - *worked hours*: ore effettivamente lavorate
 
 È stato concordato un nuovo workflow:
-- il *Responsabile* crea le issue sulla base di quanto definito nella *#gloss[Sprint Retrospective]*;
-- vengono assegnati correttamente *Assignees*, *Labels*, *Type* (di norma: Task), *#gloss[Milestone]* e *Projects*;
+- il *Responsabile* crea le issue sulla base di quanto definito nella *Sprint Retrospective*;
+- vengono assegnati correttamente *Assignees*, *Labels*, *Type* (di norma: Task), *Milestone* e *Projects*;
 - è necessario configurare correttamente i *Relationships*, in particolare:
   - impostare una *parent issue* per ogni task principale, non assegnata a nessuno;
   - suddividere la parent issue in sub-issue atomiche (le più piccole possibili);
@@ -108,7 +108,7 @@ Il workflow differisce da quello dei documenti monolitici:
   [Siria Salvalaio],
   [#link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/issues/51")[*\#51*]],
 
-  [#gloss[Verifica] Norme di Progetto v0.2.0],
+  [Verifica Norme di Progetto v0.2.0],
   [Hossam Ezzemouri],
   [#link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/issues/52")[*\#52*]],
 
@@ -120,7 +120,7 @@ Il workflow differisce da quello dei documenti monolitici:
   [Tutto il gruppo],
   [#link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/issues/63")[*\#63*]],
 
-  [Correzione #gloss[GitHub] Issues secondo il nuovo workflow],
+  [Correzione GitHub Issues secondo il nuovo workflow],
   [Alessandro Dinato],
   [#link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/issues/64")[*\#64*]],
 
@@ -128,7 +128,7 @@ Il workflow differisce da quello dei documenti monolitici:
   [Alessandro Dinato],
   [#link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/issues/66")[*\#66*]],
 
-  [#gloss[Verifica] Verbale Interno 26/11],
+  [Verifica Verbale Interno 26/11],
   [Riccardo Graziani],
   [#link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/issues/67")[*\#67*]],
 )

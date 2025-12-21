@@ -19,7 +19,7 @@
     "Discussione dubbi precedentemente inviati al proponente via email",
     "Organizzazione prossimi incontri",
   ),
-  htmlId: "#gloss[RTB]-VerbaliEsterni",
+  htmlId: "RTB-VerbaliEsterni",
   verificatore-interno: "",
   left-signature: "",
   verificatore-esterno: "",
