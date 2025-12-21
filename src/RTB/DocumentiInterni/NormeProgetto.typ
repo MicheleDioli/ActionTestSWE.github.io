@@ -188,7 +188,7 @@ Infine, sull'ultima pagina è presente la firma del revisore interno del documen
 //alcune sezioni
 Alcuni documenti, come il presente _#gloss[Norme di Progetto]_, _#gloss[Piano di Qualifica]_ e _#gloss[Piano di Progetto]_, sono *incrementali*, cioè crescono parallelamente allo sviluppo del progetto. Per questo motivo alcuni sezioni possono rimanere inizialmente vuote o incomplete, poiché non è ancora possibile definirne i concetti.
 
-Il workflow di questi documenti differisce dagli altri "monolitici", infatti ogni *versione stabile* (vd. @doc-versionamento) considera tali solo le sezioni complete e verificate (vd. @doc-#gloss[verifica]), ignorando quelle vuote. Ogni versione stabile deve essere poi pubblicata nel sito tramite _#gloss[pull request]_, così da rendere disponibile il prima possibile lo stato aggiornato del documento.
+Il workflow di questi documenti differisce dagli altri "monolitici", infatti ogni *versione stabile* (vd. @doc-versionamento) considera tali solo le sezioni complete e verificate (vd. @doc-verifica), ignorando quelle vuote. Ogni versione stabile deve essere poi pubblicata nel sito tramite _#gloss[pull request]_, così da rendere disponibile il prima possibile lo stato aggiornato del documento.
 
 ==== Verbali
 I verbali hanno una versione modificata del frontespizio descritto sopra, in cui:
@@ -297,7 +297,7 @@ Si deve avere cura nell'utilizzare valori di `htmlId` che corrispondano con il #
 === Produzione <doc-produzione>
 La produzione di un documento avviene nei seguenti passaggi:
 1. *Scrittura*, descritta nella @doc-scrittura
-2. *#gloss[Verifica]*, descritta nella @doc-#gloss[verifica]
+2. *#gloss[Verifica]*, descritta nella @doc-verifica
 
 ==== Scrittura <doc-scrittura>
 Nel #link("#gloss[https]://glitchhub-team.#gloss[github].io/pdf/Candidatura/VerbaliInterni/2025-10-27.pdf")[*verbale interno del 27 ottobre 2025*], sono specificate le procedure scelte da _GlitchHub Team_ per la scrittura dei verbali, le quali si possono adattare alla scrittura di qualunque documento.

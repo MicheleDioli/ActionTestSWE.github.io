@@ -158,6 +158,17 @@ func processFile(path string, terms []string) {
 				}
 			}
 
+			// --- MODIFICA QUI ---
+			// Ignora se inizia con @doc-
+			// Controlliamo se ci sono abbastanza caratteri prima e se corrispondono
+			if matchStart >= 5 {
+				prefixCheck := body[matchStart-5 : matchStart]
+				if prefixCheck == "@doc-" {
+					continue
+				}
+			}
+			// --------------------
+
 			// Verifica che non sia già dentro un tag #gloss
 			if !isInsideGloss(body, termStart) && !isInsideHeading(body, termStart) {
 				// Usa il termine originale dal testo per preservare il case
