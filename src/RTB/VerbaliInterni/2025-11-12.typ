@@ -1,4 +1,4 @@
-#import "../../Templates/templateVerbali.typ": *
+#import "../../Templates/templateVerbali.typ": report,gloss
 
 #show link: underline
 #show: report.with(
@@ -43,12 +43,12 @@
     "Prof. Vardanega Tullio",
   ),
   odg: (
-    "Assegnazione ruoli per lo Sprint",
+    "Assegnazione ruoli per lo #gloss[Sprint]",
     "Allineamento sul compito dei diversi ruoli",
     "Suddivisione dei documenti da redarre",
     "Preparazione per l incontro formale con M31",
   ),
-  htmlId: "RTB-VerbaliInterni",
+  htmlId: "#gloss[RTB]-VerbaliInterni",
   verificatore-interno: "Siria Salvalaio",
   left-signature: "../assets/firme/firma_Siria_Salvalaio.png",
   tipo-verbale: "Interno",
@@ -60,7 +60,7 @@ L’incontro settimanale di sprint retrospective si è svolto come previsto, ma 
 
 = Resoconto della riunione
 
-== Assegnazione dei ruoli per lo Sprint
+== Assegnazione dei ruoli per lo #gloss[Sprint]
 
 Per la rotazione corrente, i ruoli sono stati assegnati tenendo conto dei vari impegni personali e della disponibilità dei membri del team.
 I ruoli verranno ruotati tra due settimane a partire dalla data dell’incontro.
@@ -75,7 +75,7 @@ Inoltre è stato stimato il monte ore di ciascun ruolo per lo sprint avviato.
 
 == Suddivisione dei documenti da iniziare
 
-Con l’inizio della RTB è stato deciso che gli analisti si occuperanno principalmente della redazione dei documenti, suddividendo il carico tra Norme di Progetto, Analisi dei Requisiti e Piano di Progetto.
+Con l’inizio della #gloss[RTB] è stato deciso che gli analisti si occuperanno principalmente della redazione dei documenti, suddividendo il carico tra Norme di Progetto, Analisi dei Requisiti e Piano di Progetto.
 Poichè ci si trova nelle fasi iniziali, il lavoro sarà principalmente una fase di allenamento, soprattutto per quanto riguarda l’Analisi dei Requisiti, che richiede la scrittura e la comprensione dei casi d’uso.\
 I componenti del team responsabili della redazione dei documenti si sono organizzati per rendere il lavoro di scrittura più agevole ed evitare conflitti, preferendo una modalità di lavoro asincrona.
 
@@ -94,7 +94,7 @@ Ogni membro del gruppo si impegnerà a rileggere e approfondire quanto riportato
   [Michele Dioli],
   [#link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/issues/56")[*\#56*] ],
 
-  [Verifica Verbale Interno 2025-11-12],
+  [#gloss[Verifica] Verbale Interno 2025-11-12],
   [Siria Salvalaio],
   [#link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/issues/34")[*\#34*] ],
 
@@ -102,7 +102,7 @@ Ogni membro del gruppo si impegnerà a rileggere e approfondire quanto riportato
   [Riccardo Graziani],
   [#link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/issues/55")[*\#55*] ],
 
-  [Verifica Verbale Esterno 2025-11-13],
+  [#gloss[Verifica] Verbale Esterno 2025-11-13],
   [Jaume Bernardi],
   [#link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/issues/36")[*\#36*] ],
 

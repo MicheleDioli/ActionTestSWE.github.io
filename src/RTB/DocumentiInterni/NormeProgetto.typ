@@ -39,7 +39,7 @@
   ),
 
   distribuzione: ("GlitchHub Team", "Prof. Vardanega Tullio", "Prof. Cardin Riccardo"),
-  htmlId: "RTB-DocumentiInterni",
+  htmlId: "#gloss[RTB]-DocumentiInterni",
   verificatore-interno: "",
   left-signature: "",
   tipo-documento: "Norme di Progetto",
@@ -51,7 +51,7 @@
 == Scopo del documento
 Lo scopo di questo documento è di descrivere il #gloss[_Way of Working_] del gruppo _GlitchHub Team_ durante lo svolgimento del progetto didattico.
 
-A tale scopo, il gruppo ha deciso di prendere come riferimento lo standard internazionale *ISO/IEC 12207:1995*, che definisce una struttura normata per descrivere i processi di cicli di vita del Software.
+A tale scopo, il gruppo ha deciso di prendere come riferimento lo standard internazionale *#gloss[ISO/IEC 12207:1995]*, che definisce una struttura normata per descrivere i processi di cicli di vita del Software.
 
 Più nello specifico, vengono riconosciuti dallo standard tre tipi principali di processi:
 
@@ -73,7 +73,7 @@ La creazione e lo sviluppo di un sistema software richiedono una grande operazio
 
 Il principale tipo di ambiguità che si può creare nello svolgimento del progetto è l'incomprensione del significato dei termini utilizzati dal gruppo. A tale scopo, la nomenclatura adottata da quest'ultimo verrà raccolta nel #link("https://glitchhub-team.github.io/pdf/glossary.pdf")[*Glossario*], un #gloss[documento incrementale] che definisce ogni parola rilevante per il dominio del progetto.
 
-Come descritto nel #link("https://glitchub-team.github.io/RTB/VerbaliInterni/2025-11-19.pdf")[*verbale interno del 19 novembre 2025*], il gruppo si impegna ad annotare tutte le parole del glossario che compaiono nei documenti con una G a pedice in questo modo:
+Come descritto nel #link("https://glitchub-team.github.io/#gloss[RTB]/VerbaliInterni/2025-11-19.pdf")[*verbale interno del 19 novembre 2025*], il gruppo si impegna ad annotare tutte le parole del glossario che compaiono nei documenti con una G a pedice in questo modo:
 
 #align(center, gloss("parola"))
 
@@ -88,7 +88,7 @@ Per una buona comprensione del dominio da parte del gruppo, è fondamentale che 
 
 === Riferimenti informativi
 
-- *Standard ISO/IEC 12207:1995*
+- *Standard #gloss[ISO/IEC 12207:1995]*
   - Link: https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf
   - Ultimo accesso: 24 novembre 2025
   - Note: Questo documento ha una struttura che si ispira a questo standard, ma non ha la pretesa di rispettarlo pienamente.
@@ -147,7 +147,7 @@ Quindi, questo processo riguarda tutte le attività di pianificazione, progettaz
 - *#gloss[Typst]*: è un sistema di composizione tipografica digitale, che permette di redigere documenti con un linguaggio di mark-up intuitivo e più semplice di LaTeX. Il sistema fornisce anche un linguaggio di scripting che permette di scrivere con semplicità macro e procedure che semplificano la scrittura di contenuti dinamici. La forza di #gloss[Typst] risiede nel suo sistema di templating, utilizzato in modo ubiquitario da _GlitchHub Team_ e nel reloading istantaneo che consente una scrittura più rapida dei documenti.
 
 - *#gloss[GitHub]*: per il controllo del versionamento dei sorgenti #gloss[Typst] dei documenti
-  - *GitHub Issues*: per l'assegnazione degli elementi del _Backlog_ e la segnalazione di eventuali problemi nella #gloss[Repository];, sono fondamentali per il tracciamento delle azioni prese in seguito a decisioni di gruppo
+  - *#gloss[GitHub] Issues*: per l'assegnazione degli elementi del _Backlog_ e la segnalazione di eventuali problemi nella #gloss[Repository];, sono fondamentali per il tracciamento delle azioni prese in seguito a decisioni di gruppo
   - *Github Project*: per la visualizzazione delle task in modalità Kanban, utile ad illustrare lo stato d'avanzamento delle task assegnate
   - #gloss[GitHub Pages]: per l'hosting via sito web della documentazione stabile di progetto
 
@@ -264,7 +264,7 @@ I documenti seguono uno schema di locazione all'interno del file system del sito
 #align(center, [`/pdf/`*`[FASE]`*`/`*`[TIPO DOCUMENTO]`*`/`*`[NOME DOCUMENTO]`*`.pdf`,])
 
 dove:
-- *`[FASE]`* è una tra `Candidatura`, `RTB` e `PB`, a seconda della fase della baseline di progetto a cui appartiene il documento
+- *`[FASE]`* è una tra `Candidatura`, `#gloss[RTB]` e `#gloss[PB]`, a seconda della fase della baseline di progetto a cui appartiene il documento
 - *`[TIPO DOCUMENTO]`* corrisponde a:
   - `VerbaliInterni` per i verbali interni
   - `VerbaliEsterni` per i verbali esterni
@@ -292,7 +292,7 @@ Uno dei punti di forza di #gloss[Typst] è la funzionalità di codificare metada
 #heading(outlined: false, depth: 5)[`htmlId`]
 Il metadato `htmlId` permette di specificare a quale sottosezione della #link("https://GlitchHub-Team.github.io")[*pagina web del gruppo*] associare l'ancora verso il PDF di questo documento.
 
-Si deve avere cura nell'utilizzare valori di `htmlId` che corrispondano con il #link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/blob/main/website/index.html")[layout HTML della pagina].
+Si deve avere cura nell'utilizzare valori di `htmlId` che corrispondano con il #link("https://github.com/GlitchHub-Team/GlitchHub-Team.github.io/blob/main/website/index.html")[layout #gloss[HTML] della pagina].
 
 === Produzione <doc-produzione>
 La produzione di un documento avviene nei seguenti passaggi:
@@ -308,14 +308,14 @@ I passaggi descritti sono i seguenti:
 
 2. Quindi, nella #gloss[repository] si crea un branch secondario nominato `Documentation-[nome attività]`: è importante che questa convenzione sia seguita, poiché all'interno della #gloss[repository] vengono utilizzate delle automazioni *#gloss[GitHub Actions]* che permettono la compilazione dei file sorgenti #gloss[Typst] in PDF.
 
-3. La stesura del documento avviene sul branch apposito usando Visual Studio Code con l'estensione *Tinymist Typst*, che consente di vedere un'anteprima del documento che si scrive. Inoltre, è richiesto il rispetto delle convenzioni descritte nella @doc-convenzioni.
+3. La stesura del documento avviene sul branch apposito usando Visual Studio Code con l'estensione *Tinymist #gloss[Typst]*, che consente di vedere un'anteprima del documento che si scrive. Inoltre, è richiesto il rispetto delle convenzioni descritte nella @doc-convenzioni.
 
 4. Una volta terminata la prima stesura, si deve fare il _push_ delle proprie modifiche sul branch di lavoro e creare una nuova _Pull Request_ in modo tale da fare il _merge_ da `Documentation-[...]` a `main`, assegnando i verificatori scelti come Reviewer.
 
-==== Verifica <doc-verifica>
+==== #gloss[Verifica] <doc-verifica>
 Ogni documento scritto deve essere verificato da un componente del gruppo diverso dallo scrittore originale, per evitare di travisare, intenzionalmente o meno, le decisioni e azioni prese dal gruppo.
 
-Le procedure di verifica sono riportate di seguito, come descritte nel #link("https://glitchhub-team.github.io/pdf/Candidatura/VerbaliInterni/2025-10-27.pdf")[*verbale interno del 27 ottobre 2025*] e nel #link("https://glitchhub-team.github.io/pdf/RTB/VerbaliInterni/2025-11-12.pdf")[*verbale interno del 12 novembre 2025*].
+Le procedure di verifica sono riportate di seguito, come descritte nel #link("https://glitchhub-team.github.io/pdf/Candidatura/VerbaliInterni/2025-10-27.pdf")[*verbale interno del 27 ottobre 2025*] e nel #link("https://glitchhub-team.github.io/pdf/#gloss[RTB]/VerbaliInterni/2025-11-12.pdf")[*verbale interno del 12 novembre 2025*].
 
 1. Quando il primo redattore contrassegna il documento come *Da verificare* (vd. @doc-def-da-verificare), quest'ultimo contatta il verificatore scelto per iniziare la procedura di verifica
 

@@ -1,4 +1,4 @@
-#import "../../Templates/templateDocumentiGenerici.typ": *
+#import "../../Templates/templateDocumentiGenerici.typ": report,gloss
 
 #show link: underline
 #show: report.with(

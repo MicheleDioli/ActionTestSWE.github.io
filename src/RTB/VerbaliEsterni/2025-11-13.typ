@@ -30,7 +30,7 @@
     "Conoscere framework organizzativo di M31",
     "Analizzare insieme il testo del capitolato",
   ),
-  htmlId: "RTB-VerbaliEsterni",
+  htmlId: "#gloss[RTB]-VerbaliEsterni",
   verificatore-interno: "Siria Salvalaio",
   left-signature: "../assets/firme/firma_Siria_Salvalaio.png",
   verificatore-esterno: "",
@@ -53,13 +53,13 @@ La riunione è stata convocata a seguito dell'aggiudicazione del capitolato d'ap
 == Canali di comunicazione asincroni
 L'azienda si è detta disponibile a creare un canale privato su Microsoft Teams, precisando che in caso di comunicazioni brevi la mail resta il modo più rapido per restare in contatto. A tal fine è stato creato l'indirizzo dedicato alle comunicazioni di progetto: *swe\@m31.com*.
 
-== Framework organizzativo M31
+== #gloss[Framework] organizzativo M31
 === Metodologia di lavoro
-Si è approfondito con Luca Cossaro del _way of working_ adottato da M31. L'azienda adotta una metodologia agile, utilizzando *Scrum* per i progetti più intensivi e *Kanban* per quelli a ritmo più disteso. Dopo una breve confronto si è concordato di adottare un framework agile, definendo due tipologie di meeting ricorrenti:
+Si è approfondito con Luca Cossaro del _way of working_ adottato da M31. L'azienda adotta una metodologia agile, utilizzando *#gloss[Scrum]* per i progetti più intensivi e *Kanban* per quelli a ritmo più disteso. Dopo una breve confronto si è concordato di adottare un framework agile, definendo due tipologie di meeting ricorrenti:
 - *settimanale di allineamento*, in cui M31 assume un ruolo di mentore per discutere dubbi, eventuali ritardi e criticità. L'azienda ha precisato che non è necessaria la presenza dell'intero gruppo a questi incontri;
 - *bisettimanale strutturato*, in cui l'azienda si pone come cliente e il gruppo presenta il lavoro svolto e la pianificazione delle attività successive.
 Il periodo di tempo tra questi incontri formali rimane flessibile in base alle esigenze del gruppo. \
-Per l'organizzazione interna del gruppo è stato suggerito di adottare un approccio ibrido *Scrum-Kanban*, definendo obiettivi chiari per ogni *sprint*.
+Per l'organizzazione interna del gruppo è stato suggerito di adottare un approccio ibrido *#gloss[Scrum]-Kanban*, definendo obiettivi chiari per ogni *sprint*.
 
 == Analisi del capitolato
 === Architettura
@@ -68,11 +68,11 @@ Una parte significativa della riunione è stata dedicata all'analisi del capitol
 - il simulatore dovrà *standardizzare* i dati e disporre di un *buffer* in grado di conservarli in ingresso in caso di disconnessione;
 - l'architettura proposta è da considerarsi *indicativa*, e i dettagli implementativi verranno definiti nelle fasi successive.
 
-=== Analisi dei requisiti
+=== #gloss[Analisi dei requisiti]
 In merito ai requisiti funzionali, sono stati evidenziati i seguenti:
 - *RQ2.2*: è importante garantire l'invio al cloud tramite protocolli sicuri;
 - *RQ3*: è essenziale assicurare l'*isolamento* logico tra diversi tenant;
-- *RQ5*: l'interfaccia web non deve risultare *complessa*; è sufficiente una UI essenziale e intuitiva.
+- *RQ5*: l'interfaccia web non deve risultare *complessa*; è sufficiente una #gloss[UI] essenziale e intuitiva.
 
 Per quanto riguarda i requisiti funzionali opzionali, è stata indicata come prioritaria l'integrazione con applicazioni di terze parti (*RQ6*), rispetto a prevedere meccanismi di alert (*RQ7*). \
 
