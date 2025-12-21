@@ -211,7 +211,6 @@ I diari di bordo sono degli incontri periodici in aula, organizzati dal prof. Va
 Le diapositive dei diari di bordo non seguono la struttura descritta precedentemente ma hanno la seguente struttura:
 - *Difficoltà riscontrate*: Sezione in cui si enunciano le difficoltà riscontrate dal gruppo.
 - *Questioni aperte*: Sezione in cui il gruppo pone eventuali domande al professore e/o agli altri gruppi.
-
 La scrittura delle _slides_ di un Diario di Bordo prevede l'utilizzo del template `src/Templates/templateSlides.typ`
 
 ==== Altri documenti
