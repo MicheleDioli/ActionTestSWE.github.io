@@ -61,7 +61,7 @@ Le informazioni potranno essere associate alla posizione geografica o ad altri d
 L’azienda ha inoltre precisato di disporre di *legal specialists* che si occupano della conformità alle normative sulla privacy (_GDPR_).
 
 == Architettura e supporto AWS
-Il gruppo ha richiesto chiarimenti sull'#gloss[architettura *serverless]* proposta nel capitolato di appalto e sul livello di supporto previsto per la configurazione dei servizi *AWS*. \
+Il gruppo ha richiesto chiarimenti sull'#gloss[architettura serverless] proposta nel capitolato di appalto e sul livello di supporto previsto per la configurazione dei servizi *AWS* . \
 Miriade ha confermato la disponibilità a fornire assistenza e indicazioni operative, naturalmente non con un affiancamento passo-passo, con lo scopo di incoraggiare l’autonomia dei membri del gruppo nello studio della piattaforma.
 
 == Libertà di sviluppo su piattaforme mobili
